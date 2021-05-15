@@ -15,6 +15,6 @@ class MainController extends Controller
     public function dresses() {
         $data = Dress::all();
         @dd($data);
-        return view( 'dresses');
+        return view('dresses');
     }
 }
