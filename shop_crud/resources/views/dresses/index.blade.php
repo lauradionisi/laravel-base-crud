@@ -14,7 +14,7 @@
             <th scope="col">Name</th>
             <th scope="col">Color</th>
             <th scope="col">Size</th>
-            <th scope="col">Detail</th>
+            <th scope="col">Price</th>
           </tr>
         </thead>
         <tbody>
@@ -24,7 +24,14 @@
                 <td>{{ $vestito['name'] }}</td>
                 <td>{{ $vestito['color'] }}</td>
                 <td>{{ $vestito['size'] }}</td>
-                <td><a href="{{route('vestiti.show', ['vestiti' => $vestito -> id] )}}" class="btn btn-info">Detail</a></td>
+                <td>{{ $vestito['price'] }}</td>
+
+                <td>
+                  <a href="{{route('vestiti.show', ['vestiti' => $vestito -> id] )}}" class="btn btn-info">Detail</a>
+                </td>
+                <td>
+                  <a href="{{route('vestiti.edit', ['vestiti' => $vestito -> id] )}}" class="btn btn-warning">Edit</a>
+                </td>
                 </tr>
             @endforeach        
         </tbody>

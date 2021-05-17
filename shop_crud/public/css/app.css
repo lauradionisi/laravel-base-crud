@@ -5,3 +5,7 @@ main {
 .container {
     margin: 30px;
 }
+
+.jumbotron img {
+    width: 100%;
+}
