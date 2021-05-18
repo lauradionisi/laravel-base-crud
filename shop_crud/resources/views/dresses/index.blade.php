@@ -31,7 +31,16 @@
                 </td>
                 <td>
                   <a href="{{route('vestiti.edit', ['vestiti' => $vestito -> id] )}}" class="btn btn-warning">Edit</a>
+
                 </td>
+                <td>
+                  <form action="{{ route('vestiti.destroy', $vestito['id'] )}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Cancella elemento</button>
+                  </form>
+                </td>
+                 
                 </tr>
             @endforeach        
         </tbody>
